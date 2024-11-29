@@ -7,6 +7,45 @@ body {
     margin: 0 auto;
 }
 
+#menu-hamburguer {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    
+}
+
+#menu-hamburguer span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #F4F1DE;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+
+#menu {
+    display: flex;
+    list-style: none;
+}
+
+#menu.active {
+    display: block; 
+    flex-direction: column;
+    background-color: #264653;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+nav ul{
+    align-items: center;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -37,11 +76,15 @@ a:hover {
     transition: 0.3s;
 }
 
-#ja-tem-uma-conta {
-    border: 2px solid #71b3b6;
-    padding: 10px;
-    border-radius: 20px;
-}
+#ja-tem-uma-conta  {
+        display: inline-block; 
+        border: 2px solid #71b3b6;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-align: center; 
+        margin: 10px auto; 
+        width: auto; 
+    }
 
 h1 {
     font-weight: 200;
@@ -51,7 +94,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
+    flex-direction: center ;
     margin-top: 50px;
 }
 
@@ -143,3 +186,71 @@ footer span {
     background-color: #0d2a36;
 }
 
+
+
+@media screen and (max-width: 1020px){
+
+    main{flex-direction: column-reverse;
+    justify-content: center;}
+    .menu-desktop{
+        display: none ;
+    }
+
+    #menu {
+        display: none; 
+    }
+
+    #menu-hamburguer {
+        display: flex; 
+    }
+    h2 {
+        font-size: 50px;
+    }
+    form {
+        width: 90%; 
+    }
+    img {
+        width: 100%; 
+    }
+    footer {
+        grid-template-columns: 1fr; 
+        text-align: center; 
+
+    }
+
+    h2 {
+        font-size: 180%; 
+        
+        padding: 10px;
+        margin: auto
+        ;
+    }
+   aside > p{
+        padding-left: 15px;
+        padding-right: 10px;
+    }
+    .sobre-nos{
+        font-size: 25px;
+    }
+    #copyright{
+        font-size: 65%;    }
+    form{
+        padding-left: 20px;
+    }
+    span{
+        justify-content: center;
+        padding: auto;
+        margin: auto;
+    }
+     
+
+    input {
+        padding: 25px; 
+    }
+    #submit {
+        width: 100%; 
+    }
+    .menu-mobile{
+        display:none;
+}
+}
