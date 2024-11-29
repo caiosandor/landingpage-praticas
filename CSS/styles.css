@@ -358,4 +358,53 @@ footer span {
 }
 }
 
-
+.tooltip-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptexto {
+    visibility: hidden;
+    width: 120px;
+    background-color: #F4F1DE;
+    color: #0d2a36;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptexto::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #F4F1DE transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptexto {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip img {
+    max-width: 40px;
+    cursor: pointer;
+  }
+  
