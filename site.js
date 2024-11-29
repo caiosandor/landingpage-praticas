@@ -7,25 +7,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
 const carousel = document.getElementById("carousel");
 const images = document.querySelectorAll("#carousel img");
 const totalImages = images.length;
 
-let currentIndex = 0; // Índice da imagem atual
-let interval; // Variável para o intervalo de tempo
+let currentIndex = 0;
+let interval;
 
 
 function updateCarousel() {
-    const offset = -currentIndex * 100; // Move o carrossel para a esquerda
+    const offset = -currentIndex * 100;
     carousel.style.transform = `translateX(${offset}%)`;
 }
 
 
 function startCarousel() {
     interval = setInterval(() => {
-        currentIndex = (currentIndex + 1) % totalImages; // Avança para a próxima imagem
+        currentIndex = (currentIndex + 1) % totalImages;
         updateCarousel();
     }, 2000); 
 }
